@@ -1,0 +1,303 @@
+@font-face {
+    font-family: 'Allison';
+    src: url('./Allison-Regular.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nothing';
+    src: url('./NothingYouCouldDo-Regular.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rocksalt';
+    src: url('./RockSalt-Regular.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Fred';
+    src: url('./FrederickatheGreat-Regular.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+body {
+    background-image: url('bg.jpg');
+    background-size: cover;
+    background-position-x: -100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0px;
+}
+
+header {
+    text-align:center;
+    background-image: url('bg.jpg');
+    background-size:cover;
+    
+}
+header .title {
+    font-family: 'Fred', cursive;
+    font-size: 50px;
+    margin: 15px;
+    background-image: url('bg.jpg');
+    background-size:contain;
+    width:300px;
+    box-shadow: 5px 10px 5px rgba(128, 98, 40, 0.5);
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+}
+
+
+header .motto {
+    background-image: url('bg.jpg');
+    background-size:contain;
+    padding: 8px;
+    font-family: 'Nothing', cursive;
+    font-size: 16px;
+    display:flex;
+    justify-content: center;
+}
+header .mottoText {
+    background-image: url('bg.jpg');
+    width: 400px;
+    background-position: -60%;
+}
+
+footer {
+    text-align: center;
+    /* border-top-style: solid; */
+    font-family: 'Allison', cursive;
+    font-size:15px;
+    background-image: url('bg.jpg');
+    background-size:contain;
+    padding: 8px;
+    padding-top:20px;
+    font-family: 'Nothing', cursive;
+    /* font-size: 16px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer div {
+    background-image: url('bg.jpg');
+    width: 400px;
+    background-position: -60%;
+}
+
+main {
+    min-height: 600px;
+    display: flex;
+    flex-direction: row;
+
+}
+
+
+nav {
+    background-image: url('bg.jpg');
+    background-size:auto;
+    align-self:stretch;
+    padding: 15px;
+    text-align: center;
+}
+.navTitle {
+    font-size:15px;
+}
+.navList {
+    list-style: none;
+    padding-left: 0px;
+}
+.navButton {
+    box-shadow: 5px 5px 5px rgba(128, 98, 40, 0.5);
+    font-family:'Fred', cursive;
+    font-size: 15px;
+    margin-bottom: 10px;
+    border-style:solid;
+    border-width: 2px;
+    border-radius: 15px 225px 15px 255px/255px 15px 225px 15px;
+    width:80px;
+    padding:5px;
+    background-image: url('bg.jpg');
+    background-position: -60%;
+}
+.navButton:hover {
+    transition:0.8s;
+    border-color: rgba(255, 242, 215, 0.842);
+}
+
+
+@media (max-width:600px) {
+    nav {
+        padding:5px;
+    }
+    .navButton {
+        width: 40px;
+        font-size:10px;
+    }
+}
+
+.categoriesPickerContainer, .prioritiesPickerContainer {
+    display:none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.categoriesPicker, .prioritiesPicker {
+    display:grid;
+    grid-template-columns: repeat(3, 50px);
+    grid-template-rows: repeat(6, 50px);
+    box-shadow: 5px 5px 5px rgba(128, 98, 40, 0.5);
+    border-style:solid;
+    border-width:1px;
+    border-radius: 15px 225px 15px 255px/255px 15px 225px 15px;
+    background-image: url('listBG.jpg');
+    background-size: contain;
+    box-shadow: 5px 10px 5px rgba(128, 98, 40, 0.5);
+    padding:5px;
+}
+.prioritiesPicker {
+    grid-template-columns: 50px;
+    grid-template-rows: repeat(3, 50px);
+}
+
+.categoriesPicker .categoriesPickerIcon, .prioritiesPicker .prioritiesPickerIcon {
+    width:30px;
+    margin-left: 10px;
+}
+
+
+
+.contentContainer {
+    align-self: stretch;
+    width: 100%;
+    padding:10px;
+    font-family: 'Rocksalt', cursive;
+    
+}
+
+.assetContainer {
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    padding: 15px;
+    margin-top: 30px;
+    background-image: url('listBG.jpg');
+    background-size: contain;
+    box-shadow: 5px 10px 5px rgba(128, 98, 40, 0.5);
+}
+
+.itemContainer {
+    border-radius: 10px;
+    display: grid;
+    background-color: rgba(255, 250, 227, 0.575);
+    width:100%;
+    margin: 5px;
+    padding-left:5px;
+    padding-top: 5px;
+    align-items: center;
+    font-family: 'Nothing', cursive;
+    display:block;
+}
+
+.itemTitle {
+    text-overflow:clip;
+    overflow-y: scroll;
+    height: 30px;
+    max-width:80%;
+
+}
+
+
+input.itemDueDate {
+    font-family: 'Fred', cursive;
+    background:none;
+    border-style:none;
+}
+.icon {
+    width: 18px;
+    height:auto;
+}
+.assetHeader {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height:30px;
+
+}
+.assetHeader #delete {
+    height:20px;
+}
+.assetTitle {
+    overflow-y: scroll;
+    height: 30px;
+    max-width: 80%;
+}
+
+.icon#addItem {
+    margin-left:50%;
+    margin-top:10px;
+    width:30px;
+}
+.icon#addItem, .icon#addProject {
+    margin-left:50%;
+    margin-top:30px;
+    width:50px;
+}
+
+.icon#sort {
+    padding:5px;
+    padding-top: 15px;
+}
+.icon#priority, .icon#category{
+    width:30px;
+}
+img.selectedForPicker {
+    background-image: url('bg.jpg');
+    background-size: cover;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: rgb(233, 222, 74);
+    padding:1px;
+}
+
+/* title,
+    project,
+    dueDate,
+    priority,
+    notes,
+    category, */
+
+/*
+
+PROJECT
+ [ ] title     |   dueDate    | categoryemoticon | priority color emoticon
+
+on hover, show 
+    [Part of ] PROJECT
+        L notes
+*/
+
+/* 
+PRIORITY
+ [ ] title     |   dueDate    | categoryemoticon | priority color emoticon
+
+ on hover on title, show 
+    [Part of ] PROJECT
+        L notes
+ */
+
+
+ /* CATEGORY
+ [ ] title     |   dueDate    | categoryemoticon | priority color emoticon
+
+ on hover on title, show 
+    [Part of ] PROJECT
+        L notes 
+        
+*/
